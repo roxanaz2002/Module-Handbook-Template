@@ -1,0 +1,97 @@
+\documentclass{report}
+% 当然也可以用article，也可以写自定义的cls文件
+\usepackage{course_template} 
+\usepackage{graphicx} %figure support
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.7\textwidth]{logo.png}\\[3cm] % width percentage, logo
+    {\LARGE\textbf{Junior Wizard}} \\[1cm] 
+    {\LARGE\textbf{Animagus Program}} \\[1cm]   
+    {\LARGE\textbf{Module Handbook}} \\[1.5cm]
+    \vfill % Pushes the content below to the bottom of the page
+\end{titlepage}
+
+\newpage 
+\section*{Credit Conversion Rules}
+\noindent
+At \textbf{Hogwarts School of Witchcraft and Wizardry}, \textbf{1 credit} represents \textbf{16 Academic Hours} for standard lectures. However, for courses such as \textbf{Potions}, \textbf{Transfiguration}, \textbf{Defense Against the Dark Arts}, or \textbf{Quidditch Training}, \textbf{1 credit} equals \textbf{48 Academic Hours}. 
+After all, brewing a perfect potion or dodging Bludgers takes more effort than waving a wand! So remember: more hours, more magic!
+
+\medskip % 设置段间距
+\noindent
+The Animagus Program’s Degree required on Graduation is \textbf{141 credits}. Therefore, \textbf{1 credit} at \textbf{Hogwarts School of Witchcraft and Wizardry} is equivalent to approximately \textbf{1.5 ECTS} credits.
+
+\medskip
+\noindent
+Each academic year consists of two semesters: Fall and Spring. During summer vacation, junior students are strictly prohibited from using magic on Muggles, with violations leading to serious consequences from the \texxtbf{Ministry of Magic}.
+% \medskip
+% \noindent
+% The abbreviation \textbf{“IP”} in the “Grade” column stands for \textbf{“in progress.”}
+%
+\medskip
+\noindent
+\textbf{Academic Integrity:} 
+\\
+% 可以选择学术诚信条款
+All courses place a high emphasis on academic integrity and strictly prohibit plagiarism, cheating, and other academically dishonest behaviors. Each course follows the university's plagiarism policies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% outline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Module Contents}
+
+% 使用 longtable 创建支持分页的表格
+\begin{longtable}{|p{3cm}|p{7.5cm}|p{1.5cm}|p{1.5cm}|}
+\hline
+\textbf{Course Code} & \textbf{Course Title} & \textbf{Credit} & \textbf{ECTS} \\ \hline
+\endfirsthead % 定义表格的首页
+
+% 续页表头（如果表格跨页）
+\hline
+\textbf{Course Code} & \textbf{Course Title} & \textbf{Credit} & \textbf{ECTS} \\ \hline
+\endhead
+%%% 不同课程模块，以下为示例
+% 课程代码 & 课程名称 & 学分 & ECT 
+% Mathematics 
+\multicolumn{4}{l}{\textbf{Mathematics}} \\ \hline
+MATH112 & Linear Algebra I & 4 & 6 \\ \hline
+MATH120 & Discrete Mathematics & 4 & 6 \\ \hline
+\textbf{Total} & & & \textbf{12}\\ \hline
+
+\multicolumn{4}{|l|}{\textbf{Core Magic Subjects}} \\ \hline
+MAG101 & Charms & 4 & 6 \\ \hline
+MAG102 & Transfiguration & 4 & 6 \\ \hline
+MAG103 & Defense Against the Dark Arts & 4 & 6 \\ \hline
+\textbf{Total} & & & \textbf{18} \\ \hline
+
+\multicolumn{4}{|l|}{\textbf{Alchemy and Potions}} \\ \hline
+POT201 & Potions & 4 & 6 \\ \hline
+ALC202 & Advanced Alchemy & 4 & 6 \\ \hline
+\textbf{Total} & & & \textbf{12} \\ \hline
+
+\multicolumn{4}{|l|}{\textbf{Advanced Magic and Forbidden Arts}} \\ \hline
+FOR401 & Ancient Runes & 3 & 4.5 \\ \hline
+FOR402 & Dark Magic Studies & 4 & 6 \\ \hline
+\textbf{Total} & & & \textbf{11} \\ \hline
+\end{longtable}
+
+% Electrical Engineering 
+\multicolumn{4}{l}{\textbf{Electrical Engineering}} \\ \hline
+EE131   & Electromagnetics & 4 & 6 \\ \hline
+EE156   & Signals and Systems & 4 & 6 \\ \hline
+EE180   & Introduction to Control & 4 & 6 \\ \hline
+\textbf{Total} & & & \textbf{18}\\ \hline
+
+% Computer Science 
+\multicolumn{4}{l}{\textbf{Computer Science}} \\ \hline
+CS150   & Introduction to Programming & 4 & 6 \\ \hline
+CS113   & Introduction to Machine Learning & 4 & 6 \\ \hline
+\textbf{Total} & & & \textbf{12}\\ \hline
+% Basic Sciences 
+\multicolumn{4}{l}{\textbf{Basic Sciences}} \\ \hline
+\end{longtable}
+
+
+
+\end{document}
