@@ -1,0 +1,99 @@
+% ROXANA TEMPLATE
+% course_template.sty
+\ProvidesPackage{course_template}
+% \documentclass{arcticle}
+% Author: R
+% package
+\usepackage{array}     % 表格布局
+\usepackage{geometry}  % 页面边距
+\usepackage{booktabs}  % 高质量表格横线
+\usepackage{longtable} % 多页表格支持
+\geometry{a4paper, margin=1in}
+\RequirePackage{titlesec} % font size setting
+% size ref
+% \tiny % 5pt
+% \scriptsize % 7pt
+% \footnotesize % 8pt
+% \small % 9pt
+% \normalsize % 10pt (默认大小)
+% \large % 12pt
+% \Large % 14pt
+% \LARGE % 17pt
+% \huge % 20pt
+% \Huge % 25pt
+% \itshape：斜体
+% \bfseries：粗体
+% \scshape：小型大写字母
+% \rmfamily：罗马字体（正常字体）
+% \sfdefault：无衬线字体（sans-serif）
+ 
+% 自定义 section 标题的字体大小和样式
+\titleformat{\section}
+  {\normalfont\Large\bfseries} 
+  {\thesection}{1em}{}
+% Add command 
+% # occupy blank to fill
+% longtable has strict format, attention error and warning   
+% 1. (Course Information)
+\newcommand{\courseinfo}[4]{
+    \subsubsection*{1. Course Information}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \textbf{Course Name} & #1 & \textbf{Course Code} & #2 \\ \hline
+            \textbf{Credit} & #3 & \textbf{Academic Hours} & #4 \\ \hline
+        \end{tabular}
+    \end{center}
+    %\vspace{0.5cm}
+}
+
+% 2. (Objects)
+\newcommand{\objects}[1]{
+    \subsubsection*{2. Objects}
+    #1
+}
+
+% 3. (Course Content and Schedule)
+\newcommand{\courseschedule}[1]{
+    \subsubsection*{3. Course Content and Schedule}
+    \begin{longtable}{|c|p{3cm}|p{7.5cm}|c|}
+        % 不要随意使用{|c|c|c|c|} 
+        \hline
+        \textbf{Week} & \textbf{Chapter / Title} & \textbf{Content} & \textbf{Academic Hours} \\ \hline
+        #1\\
+        \hline
+    \end{longtable}
+}
+
+% 4. (Grading Policy)
+\newcommand{\gradingpolicy}[6]{
+    \subsubsection*{4. Grading Policy}
+    \begin{center}
+        \begin{tabular}{|l|c|l|c|}
+            \hline
+            \textbf{Assessment Item} & \textbf{Percentage} & \textbf{Assessment Item} & \textbf{Percentage} \\ \hline
+            Class Performance & #1 & Homework & #2 \\ \hline
+            Attendance & #3 & Midterm Exam & #4 \\ \hline
+            Final Exam & #5 & Project & #6\\ \hline
+        \end{tabular}
+    \end{center}
+}
+
+% 5. (Textbooks)
+\newcommand{\textbooks}[1]{
+    \subsubsection*{5. Textbooks}
+    \begin{longtable}{|p{4cm}|p{4cm}|p{3cm}|p{3cm}|}
+        \hline
+        \textbf{Book Name} & \textbf{Author} & \textbf{Press} & \textbf{ISBN} \\ \hline
+        \endfirsthead
+        \hline
+        \textbf{Book Name} & \textbf{Author} & \textbf{Press} & \textbf{ISBN} \\ \hline
+        \endhead
+        \hline
+        \endfoot
+        \hline
+        \endlastfoot
+        #1 % 
+    \end{longtable}
+}
+
